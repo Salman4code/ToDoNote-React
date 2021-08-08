@@ -2,10 +2,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Install Required dependency please type below command in terminal or cmd of your project directory
 
-yarn will intall required depency
+yarn will intall required dependency
 
 ````bash
-salmank-tech:~/encoranotes$  yarn
+salmank-tech:~/ToDoNote-React$  yarn
 
 ## Getting Started
 
