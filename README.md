@@ -2,8 +2,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Install Required dependency please type below command in terminal or cmd of your project directory
 
+yarn will intall required depency
+
 ````bash
-yarn
+salmank-tech:~/encoranotes$  yarn
 
 ## Getting Started
 
