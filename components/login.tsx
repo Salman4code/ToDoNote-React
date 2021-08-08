@@ -70,6 +70,9 @@ const Login = () => {
                     onChange={formik.handleChange}
                     value={formik.values.email}
                   />{" "}
+                  {formik.touched.email && formik.errors.email ? (
+                    <div className="text-danger">{formik.errors.email}</div>
+                  ) : null}
                 </div>
                 <div className="row px-3">
                   {" "}
@@ -83,6 +86,9 @@ const Login = () => {
                     onChange={formik.handleChange}
                     value={formik.values.password}
                   />{" "}
+                  {formik.touched.password && formik.errors.password ? (
+                    <div className="text-danger">{formik.errors.password}</div>
+                  ) : null}
                 </div>
                 <div className="row mb-3 px-3">
                   {" "}
