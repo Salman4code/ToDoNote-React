@@ -12,6 +12,7 @@ const AddNote = () => {
   const dispatch = useDispatch();
   const router = useRouter();
   const [editNoteIndex, setEditNoteIndex] = useState<any>(null);
+  const [showNoteForm, setShowNoteForm] = useState(false);
   const { note, user } = useSelector((state) => state);
 
   const handleFormSubmit = (values: any) => {
@@ -49,6 +50,7 @@ const AddNote = () => {
     formik.setFieldValue("title", values.title);
     formik.setFieldValue("body", values.body);
     formik.setFieldValue("id", values.id);
+    setShowNoteForm(!showNoteForm);
   };
   const isEmpty = (obj: any) => {
     for (var prop in obj) {
@@ -79,6 +81,8 @@ const AddNote = () => {
       editNote={editNote}
       logout={logout}
       selectedNoteIndex={editNoteIndex}
+      showNoteForm={showNoteForm}
+      setShowNoteForm={setShowNoteForm}
     />
   );
 };

@@ -10,6 +10,8 @@ const Note = ({
   editNote,
   logout,
   selectedNoteIndex,
+  showNoteForm,
+  setShowNoteForm,
 }: any) => {
   return (
     <div className="container-fluid">
@@ -25,11 +27,15 @@ const Note = ({
         </div>
         <div className="col-8">
           <div className="d-flex justify-content-end mt-2">
-            <button type="button" className="btn btn-outline-dark">
+            <button
+              type="button"
+              className="btn btn-outline-dark"
+              onClick={() => setShowNoteForm(!showNoteForm)}
+            >
               &#10010;Add Note
             </button>
           </div>
-          <NoteForm formik={formik}></NoteForm>
+          {showNoteForm && <NoteForm formik={formik}></NoteForm>}
         </div>
       </div>
     </div>

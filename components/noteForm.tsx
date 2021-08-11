@@ -9,7 +9,7 @@ const NoteForm = ({ formik }: any) => {
             className="form-control"
             id="title"
             aria-describedby="title"
-            placeholder="PLEASE ENTER TITLE HERE"
+            placeholder="Please Enter Title"
             name="title"
             onChange={formik.handleChange}
             value={formik.values.title}
@@ -26,7 +26,7 @@ const NoteForm = ({ formik }: any) => {
             onChange={formik.handleChange}
             value={formik.values.body}
             id="body"
-            placeholder="PLEASE ENTER NOTE DESCRIPTION"
+            placeholder="Please Enter Note Description"
             style={{ height: "350px" }}
           />
           {formik.touched.body && formik.errors.body ? (
