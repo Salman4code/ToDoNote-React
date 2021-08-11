@@ -10,8 +10,8 @@ const Login = () => {
   const router = useRouter();
   const formik = useFormik({
     initialValues: {
-      email: "",
-      password: "",
+      email: "admin@gmail.com",
+      password: "admin123",
     },
     validationSchema: Yup.object({
       email: Yup.string().email("Invalid email address").required("Required"),
@@ -20,8 +20,18 @@ const Login = () => {
         .required("Required"),
     }),
     onSubmit: (values) => {
-      dispatch(addUser(values));
-      router.push("/addNote");
+      if (
+        values.email === "admin@gmail.com" &&
+        values.password === "admin123"
+      ) {
+        dispatch(addUser(values));
+        router.push("/addNote");
+      } else {
+        formik.setErrors({
+          email: "not a authorized user",
+        });
+        formik.setErrors({ password: "invalid password" });
+      }
     },
   });
 

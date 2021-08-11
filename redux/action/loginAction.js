@@ -8,7 +8,6 @@ export const addUser = (data) => ({
   payload: data,
 });
 
-export const removeNote = (data) => ({
+export const removeUser = () => ({
   type: REMOVE_USER,
-  payload: data,
 });

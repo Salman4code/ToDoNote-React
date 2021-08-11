@@ -1,4 +1,4 @@
-import { ADD_NOTE, REMOVE_NOTE } from "../action/noteAction";
+import { ADD_NOTE, REMOVE_NOTE, UPDATE_NOTE } from "../action/noteAction";
 
 const noteReducer = (state = [], action) => {
   switch (action.type) {
@@ -11,6 +11,8 @@ const noteReducer = (state = [], action) => {
         updateState.splice(removeIndex, 1);
       }
       return updateState;
+    case UPDATE_NOTE:
+      return action.payload;
     default:
       return state;
   }
