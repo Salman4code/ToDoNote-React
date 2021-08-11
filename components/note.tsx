@@ -31,6 +31,7 @@ const Note = ({
               type="button"
               className="btn btn-outline-dark"
               onClick={() => setShowNoteForm(!showNoteForm)}
+              disabled={selectedNoteIndex}
             >
               &#10010;Add Note
             </button>

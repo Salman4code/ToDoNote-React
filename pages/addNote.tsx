@@ -50,7 +50,7 @@ const AddNote = () => {
     formik.setFieldValue("title", values.title);
     formik.setFieldValue("body", values.body);
     formik.setFieldValue("id", values.id);
-    setShowNoteForm(!showNoteForm);
+    setShowNoteForm(true);
   };
   const isEmpty = (obj: any) => {
     for (var prop in obj) {
